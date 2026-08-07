@@ -1,0 +1,52 @@
+/* =========================
+   SkillNest Navbar
+========================= */
+
+.skillnest-brand {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+
+.skillnest-brand i {
+    margin-right: 6px;
+}
+
+
+.navbar .nav-link {
+    font-weight: 500;
+    color: var(--body-color);
+    transition: color var(--transition-fast);
+}
+
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: var(--primary-color);
+}
+
+
+.navbar .btn {
+    border-radius: var(--radius-md);
+    font-weight: 600;
+}
+
+
+.dropdown-menu {
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-md);
+    border-radius: var(--radius-md);
+}
+
+
+.dropdown-item {
+    padding: 10px 16px;
+}
+
+
+.dropdown-item:hover {
+    background-color: var(--background-color);
+    color: var(--primary-color);
+}
