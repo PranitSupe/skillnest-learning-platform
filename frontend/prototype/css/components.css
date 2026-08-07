@@ -28,11 +28,19 @@
 }
 
 
-.navbar .btn {
-    border-radius: var(--radius-md);
+.navbar .btn,
+.offcanvas .btn,
+.hero-actions .btn {
+    border-radius: var(--button-radius);
     font-weight: 600;
+    transition: all var(--transition-fast);
 }
 
+.navbar .btn:hover,
+.offcanvas .btn:hover,
+.hero-actions .btn:hover {
+    transform: translateY(-2px);
+}
 
 .dropdown-menu {
     border: 1px solid var(--border-color);

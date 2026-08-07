@@ -1,77 +1,78 @@
 :root {
+	/* Brand Colors */
 
-    /* Brand Colors */
+	--primary-color: #2563eb;
+	--primary-hover: #1d4ed8;
 
-    --primary-color: #2563eb;
-    --primary-hover: #1d4ed8;
+	--secondary-color: #334155;
+	--accent-color: #10b981;
 
-    --secondary-color: #334155;
-    --accent-color: #10b981;
+	/* Background Colors */
 
+	--background-color: #f8fafc;
+	--surface-color: #ffffff;
 
-    /* Background Colors */
+	/* Text Colors */
 
-    --background-color: #f8fafc;
-    --surface-color: #ffffff;
+	--heading-color: #111827;
+	--body-color: #4b5563;
+	--muted-color: #64748b;
 
+	/* Border */
 
-    /* Text Colors */
+	--border-color: #e5e7eb;
 
-    --heading-color: #111827;
-    --body-color: #4b5563;
-    --muted-color: #64748b;
+	/* Status Colors */
 
+	--success-color: #22c55e;
+	--warning-color: #f59e0b;
+	--danger-color: #ef4444;
 
-    /* Border */
+	/* Typography */
 
-    --border-color: #e5e7eb;
+	--font-heading: "Poppins", sans-serif;
+	--font-body: "Inter", sans-serif;
+	--font-code: "Fira Code", monospace;
 
+	/* Spacing */
 
-    /* Status Colors */
+	--space-xs: 4px;
+	--space-sm: 8px;
+	--space-md: 16px;
+	--space-lg: 24px;
+	--space-xl: 32px;
+	--space-xxl: 48px;
 
-    --success-color: #22c55e;
-    --warning-color: #f59e0b;
-    --danger-color: #ef4444;
+	/* Border Radius */
 
+	--radius-sm: 6px;
+	--radius-md: 10px;
+	--radius-lg: 16px;
+	--radius-xl: 24px;
 
-    /* Typography */
+	/* Shadows */
 
-    --font-heading: "Poppins", sans-serif;
-    --font-body: "Inter", sans-serif;
-    --font-code: "Fira Code", monospace;
+	--shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.08);
 
+	--shadow-md: 0 5px 15px rgba(0, 0, 0, 0.1);
 
-    /* Spacing */
+	--shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.12);
 
-    --space-xs: 4px;
-    --space-sm: 8px;
-    --space-md: 16px;
-    --space-lg: 24px;
-    --space-xl: 32px;
-    --space-xxl: 48px;
+	/* Transitions */
 
+	--transition-fast: 0.2s ease;
 
-    /* Border Radius */
+	--transition-normal: 0.3s ease;
 
-    --radius-sm: 6px;
-    --radius-md: 10px;
-    --radius-lg: 16px;
-    --radius-xl: 24px;
+	/* Button Radius */
 
+	--button-radius: 50px;
 
-    /* Shadows */
+	/* Form Radius */
 
-    --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.08);
+	--input-radius: 10px;
 
-    --shadow-md: 0 5px 15px rgba(0, 0, 0, 0.10);
+	/* Card Radius */
 
-    --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.12);
-
-
-    /* Transitions */
-
-    --transition-fast: 0.2s ease;
-
-    --transition-normal: 0.3s ease;
-
+	--card-radius: 16px;
 }

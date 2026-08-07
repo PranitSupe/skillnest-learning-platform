@@ -1,0 +1,80 @@
+/* =========================
+   Hero Responsive
+========================= */
+
+@media (max-width: 991.98px) {
+
+    .hero-section {
+        padding: 70px 0;
+    }
+
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .hero-image-wrapper {
+        padding-top: 10px;
+    }
+
+}
+
+
+@media (max-width: 575.98px) {
+
+    .hero-section {
+        padding: 50px 0;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-description {
+        font-size: 0.95rem;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+    }
+
+    .hero-trust {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+@media (max-width: 575.98px) {
+
+    .hero-search {
+        width: 100%;
+    }
+
+    .hero-search .input-group {
+        flex-wrap: nowrap;
+        padding: 4px;
+    }
+
+    .hero-search .input-group-text {
+        padding-left: 10px;
+        padding-right: 5px;
+    }
+
+    .hero-search .form-control {
+        width: 100%;
+        min-width: 0;
+
+        padding: 10px 6px;
+        font-size: 0.9rem;
+    }
+
+    .hero-search .btn {
+        padding: 9px 14px;
+        font-size: 0.9rem;
+    }
+
+}
+
+}
