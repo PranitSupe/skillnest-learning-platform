@@ -221,6 +221,76 @@
 }
 
 
+@media (max-width: 991.98px) {
+
+    .course-card {
+        flex: 0 0 calc(
+            (100% - 24px) / 2
+        );
+    }
+
+}
+
+
+@media (max-width: 575.98px) {
+
+    .section-heading-row {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+
+    }
+
+
+    .course-card {
+
+        flex: 0 0 100%;
+
+    }
+
+}
+
+
+@media (max-width: 991.98px) {
+
+    .course-card {
+
+        flex: 0 0 calc((100% - 24px) / 2);
+
+    }
+
+}
+
+@media (max-width: 575.98px) {
+
+    .course-card {
+
+        flex: 0 0 100%;
+
+    }
+
+
+    .course-image {
+
+        height: 190px;
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
