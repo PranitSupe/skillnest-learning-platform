@@ -1,44 +1,113 @@
-
-
-//JavaScript — Previous / Next:
+/* =========================
+   Course Slider Elements
+========================= */
 
 const courseTrack = document.getElementById("courseTrack");
-
 const coursePrev = document.getElementById("coursePrev");
-
 const courseNext = document.getElementById("courseNext");
 
 
+/* =========================
+   Slider Variables
+========================= */
+
 let currentSlide = 0;
 
-const cardsPerSlide = 3;
 
-const totalCards =
-    courseTrack.children.length;
+/* =========================
+   Get Cards Per Slide
+========================= */
 
-const totalSlides =
-    Math.ceil(totalCards / cardsPerSlide);
+function getCardsPerSlide() {
 
-
-
-    //Next button:
-
-
-courseNext.addEventListener("click", function () {
-
-    if (currentSlide < totalSlides - 1) {
-
-        currentSlide++;
-
-        updateCourseSlider();
-
+    if (window.innerWidth <= 575.98) {
+        return 1;
     }
 
-});
+    if (window.innerWidth <= 991.98) {
+        return 2;
+    }
+
+    return 3;
+}
 
 
-//Previous button:
+/* =========================
+   Get Total Slides
+========================= */
 
+function getTotalSlides() {
+
+    const cardsPerSlide = getCardsPerSlide();
+
+    const totalCards = courseTrack.children.length;
+
+    return Math.ceil(totalCards / cardsPerSlide);
+}
+
+
+/* =========================
+   Get Card Gap
+========================= */
+
+function getCardGap() {
+
+    const styles = window.getComputedStyle(courseTrack);
+
+    return parseFloat(styles.columnGap) || 0;
+}
+
+
+/* =========================
+   Update Buttons
+========================= */
+
+function updateCourseButtons() {
+
+    const totalSlides = getTotalSlides();
+
+    coursePrev.disabled = currentSlide === 0;
+
+    courseNext.disabled =
+        currentSlide >= totalSlides - 1;
+}
+
+
+/* =========================
+   Update Slider
+========================= */
+
+function updateCourseSlider() {
+
+    const firstCard = courseTrack.children[0];
+
+    if (!firstCard) {
+        return;
+    }
+
+
+    const cardsPerSlide = getCardsPerSlide();
+
+    const cardWidth = firstCard.getBoundingClientRect().width;
+
+    const gap = getCardGap();
+
+
+    const slideWidth =
+        (cardWidth + gap) * cardsPerSlide;
+
+
+    courseTrack.style.transform =
+        `translateX(-${currentSlide * slideWidth}px)`;
+
+
+    updateCourseButtons();
+}
+
+
+/* =========================
+   Previous Button
+========================= */
 
 coursePrev.addEventListener("click", function () {
 
@@ -53,37 +122,61 @@ coursePrev.addEventListener("click", function () {
 });
 
 
-//Slider function
+/* =========================
+   Next Button
+========================= */
 
-function updateCourseSlider() {
+courseNext.addEventListener("click", function () {
 
-    const cardWidth =
-        courseTrack.children[0].offsetWidth;
+    const totalSlides = getTotalSlides();
 
-    const gap = 24;
+    if (currentSlide < totalSlides - 1) {
 
-    const moveAmount =
-        (cardWidth + gap) * cardsPerSlide;
+        currentSlide++;
 
-    courseTrack.style.transform =
-        `translateX(-${currentSlide * moveAmount}px)`;
+        updateCourseSlider();
 
-    updateCourseButtons();
-}
+    }
 
-
-//Disable Buttons at the Beginning/End:
+});
 
 
-function updateCourseButtons() {
+/* =========================
+   Handle Window Resize
+========================= */
 
-    coursePrev.disabled =
-        currentSlide === 0;
-
-    courseNext.disabled =
-        currentSlide === totalSlides - 1;
-
-}
+let previousCardsPerSlide = getCardsPerSlide();
 
 
-//
+window.addEventListener("resize", function () {
+
+    const currentCardsPerSlide = getCardsPerSlide();
+
+
+    /*
+       Reset the slider only when
+       responsive breakpoint changes.
+    */
+
+    if (
+        currentCardsPerSlide !==
+        previousCardsPerSlide
+    ) {
+
+        currentSlide = 0;
+
+        previousCardsPerSlide =
+            currentCardsPerSlide;
+    }
+
+
+    updateCourseSlider();
+
+});
+
+
+/* =========================
+   Initial Load
+========================= */
+
+updateCourseSlider();

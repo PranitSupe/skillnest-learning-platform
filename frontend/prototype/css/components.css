@@ -60,7 +60,31 @@
 }
 
 
+/* =========================
+   Hero Action Buttons
+========================= */
 
+.hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+
+.hero-actions .btn {
+    min-width: 150px;
+    height: 48px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 20px;
+
+    border-radius: var(--button-radius);
+
+    font-weight: 600;
+}
 
 
 
@@ -93,7 +117,9 @@
 
     border-radius: 16px;
 
-    box-shadow: var(--shadow-sm);
+  
+    box-shadow: 0 6px 20px rgba(15, 23, 42, 0.10);
+
 
     transition:
         background-color 0.3s ease,
@@ -107,11 +133,11 @@
 
 .stat-card:hover {
 
-    transform: translateY(-4px);
 
-    box-shadow: var(--shadow-md);
+    transform: translateY(-6px);
+
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.14);
 }
-
 
 /* 
    Stat Icon
@@ -446,17 +472,17 @@
     color: var(--primary-dark);
 }
 
+
 /* =========================
    Course Slider
 ========================= */
 
 .course-slider {
     width: 100%;
-
     overflow: hidden;
-    
-    padding: 10px; 
 }
+
+
 
 
 /* =========================
@@ -470,6 +496,8 @@
 
     transition: transform 0.5s ease;
 }
+
+
 /* =========================
    Slider Controls
 ========================= */
@@ -561,13 +589,15 @@
 }
 
 
+
 /* =========================
-   Course Card
+   Desktop - 3 Cards
 ========================= */
 
 .course-card {
-
     flex: 0 0 calc((100% - 48px) / 3);
+
+    min-width: 0;
 
     background-color: #ffffff;
 
@@ -586,19 +616,14 @@
 }
 
 
-/* =========================
-   Course Card Hover
-========================= */
 
 .course-card:hover {
-
     transform: translateY(-6px);
 
     box-shadow: var(--shadow-md);
 
     border-color: #bfdbfe;
 }
-
 
 /* =========================
    Course Image

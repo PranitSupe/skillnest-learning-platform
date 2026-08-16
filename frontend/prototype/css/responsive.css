@@ -37,12 +37,15 @@
         font-size: 0.95rem;
     }
 
-    .hero-actions {
+     .hero-actions {
         flex-direction: column;
+        align-items: stretch;
+        width: 100%;
     }
 
     .hero-actions .btn {
         width: 100%;
+        min-width: 0;
     }
 
     .hero-trust {
@@ -221,12 +224,14 @@
 }
 
 
+/* =========================
+   Tablet - 2 Cards
+========================= */
+
 @media (max-width: 991.98px) {
 
     .course-card {
-        flex: 0 0 calc(
-            (100% - 24px) / 2
-        );
+        flex: 0 0 calc((100% - 24px) / 2);
     }
 
 }
@@ -254,36 +259,40 @@
 }
 
 
+/* =========================
+   Tablet - 2 Cards
+========================= */
+
 @media (max-width: 991.98px) {
 
     .course-card {
-
         flex: 0 0 calc((100% - 24px) / 2);
-
     }
 
 }
+
+
+/* =========================
+   Mobile - 1 Card
+========================= */
 
 @media (max-width: 575.98px) {
 
     .course-card {
-
         flex: 0 0 100%;
-
     }
 
 
     .course-image {
-
         height: 190px;
+    }
 
+
+    .course-content {
+        padding: 18px;
     }
 
 }
-
-
-
-
 
 
 
